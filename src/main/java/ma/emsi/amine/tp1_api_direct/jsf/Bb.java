@@ -48,6 +48,42 @@ public class Bb implements Serializable {
     /**
      * Contexte JSF. Utilisé pour qu'un message d'erreur s'affiche dans le formulaire.
      */
+
+    private String texteRequeteJson;
+    private String texteReponseJson;
+    private boolean debug;
+
+    // Getters et setters pour les nouvelles propriétés
+    public String getTexteRequeteJson() {
+        return texteRequeteJson;
+    }
+
+    public void setTexteRequeteJson(String texteRequeteJson) {
+        this.texteRequeteJson = texteRequeteJson;
+    }
+
+    public String getTexteReponseJson() {
+        return texteReponseJson;
+    }
+
+    public void setTexteReponseJson(String texteReponseJson) {
+        this.texteReponseJson = texteReponseJson;
+    }
+
+    public boolean isDebug() {
+        return debug;
+    }
+
+    public void setDebug(boolean debug) {
+        this.debug = debug;
+    }
+
+    // Méthode pour basculer le mode debug
+    public String toggleDebug() {
+        this.debug = !this.debug;
+        return null; // Rester sur la même page
+    }
+    
     @Inject
     private FacesContext facesContext;
 
