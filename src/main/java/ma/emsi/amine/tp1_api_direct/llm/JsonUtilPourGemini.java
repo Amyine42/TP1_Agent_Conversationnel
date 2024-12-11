@@ -89,7 +89,9 @@ public class JsonUtilPourGemini implements Serializable {
         Entity entity = Entity.entity(requestBody, MediaType.APPLICATION_JSON_TYPE);
         // Pour afficher la requête JSON dans la page JSF
         this.texteRequeteJson = prettyPrinting(requeteJson);
+        System.out.println("**********"+this.texteRequeteJson+"*********");
         // Envoi la requête par l'intermédiaire du client de l'API de Gemini.
+
         try (Response response = geminiClient.envoyerRequete(entity)) {
             // Entité incluse dans la réponse (texte au format JSON qui englobe la réponse à la question)
             String texteReponseJson = response.readEntity(String.class);

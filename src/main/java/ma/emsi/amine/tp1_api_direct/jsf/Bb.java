@@ -160,6 +160,7 @@ public class Bb implements Serializable {
             this.texteRequeteJson = interaction.questionJson();
             this.texteReponseJson = interaction.reponseJson();
         } catch (Exception e) {
+            e.printStackTrace();
             FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,
                     "Problème de connexion avec l'API du LLM",
                     "Problème de connexion avec l'API du LLM : " + e.getMessage());
