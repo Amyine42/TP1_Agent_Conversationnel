@@ -9,12 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df0f0a1-3c79-4af7-8244-f66b5ca814ff" name="Changes" comment="Modification debug Bb">
+    <list default="true" id="5df0f0a1-3c79-4af7-8244-f66b5ca814ff" name="Changes" comment="API direct réussie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/jsf/Bb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/jsf/Bb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/llm/JsonUtilPourGemini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/llm/JsonUtilPourGemini.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/llm/LlmClientPourGemini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/llm/LlmClientPourGemini.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +183,8 @@
       <workItem from="1733921784628" duration="3944000" />
       <workItem from="1733926288513" duration="165000" />
       <workItem from="1733926552726" duration="675000" />
-      <workItem from="1733940160143" duration="2527000" />
+      <workItem from="1733940160143" duration="3119000" />
+      <workItem from="1733957133599" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout des fichiers du tp0">
       <option name="closed" value="true" />
@@ -228,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733922090030</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="API direct réussie">
+      <option name="closed" value="true" />
+      <created>1733943967774</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733943967775</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +246,7 @@
     <MESSAGE value="Ajout de classes JsonUtil,LlmClient,RequeteException" />
     <MESSAGE value="Modification LlmInteraction" />
     <MESSAGE value="Modification debug Bb" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification debug Bb" />
+    <MESSAGE value="API direct réussie" />
+    <option name="LAST_COMMIT_MESSAGE" value="API direct réussie" />
   </component>
 </project>

@@ -81,7 +81,8 @@ public class JsonUtilPourGemini implements Serializable {
         String requestBody;
         if (this.requeteJson == null) {
             // Si c'est la première question, crée la requête JSON avec le rôle système.
-            requestBody = creerRequeteJson(this.systemRole, question);
+            String tone = "drôle";
+            requestBody = creerRequeteJson(this.systemRole, tone, question);
         } else {
             // Ajout de la question.
             // Ce qui sera envoyé dans le corps de la requête POST.
@@ -127,11 +128,11 @@ public class JsonUtilPourGemini implements Serializable {
      * @ param question question posée par l'utilisateur.
      * @return le texte du document JSON de la requête.
      */
-    private String creerRequeteJson(String systemRole, String question) {
+    private String creerRequeteJson(String systemRole, String tone, String question) {
         // Création de l'objet "system_instruction"
         JsonArray systemInstructionParts = Json.createArrayBuilder()
                 .add(Json.createObjectBuilder()
-                        .add("text", systemRole))
+                        .add("text", systemRole+ ". Ton: " + tone))
                 .build();
         JsonObject systemInstruction = Json.createObjectBuilder()
                 .add("parts", systemInstructionParts)
