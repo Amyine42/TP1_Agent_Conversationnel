@@ -6,6 +6,8 @@ import jakarta.faces.model.SelectItem;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import ma.emsi.amine.tp1_api_direct.llm.JsonUtilPourGemini;
+import ma.emsi.amine.tp1_api_direct.llm.LlmInteraction;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -145,24 +147,30 @@ public class Bb implements Serializable {
      */
     public String envoyer() {
         if (question == null || question.isBlank()) {
-            // Erreur ! Le formulaire va être automatiquement réaffiché par JSF en réponse à la requête POST,
-            // avec le message d'erreur donné ci-dessous.
             FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,
                     "Texte question vide", "Il manque le texte de la question");
             facesContext.addMessage(null, message);
             return null;
         }
-        // Entourer la réponse avec "..".
-        this.reponse = "..";
-        // Si la conversation n'a pas encore commencé, ajouter le rôle système au début de la réponse
+        try {
+            // Appel à JsonUtil pour traiter la question
+            JsonUtilPourGemini jsonUtil = new JsonUtilPourGemini();
+            LlmInteraction interaction = jsonUtil.envoyerRequete(question);
+            this.reponse = interaction.reponseExtraite();
+            this.texteRequeteJson = interaction.questionJson();
+            this.texteReponseJson = interaction.reponseJson();
+        } catch (Exception e) {
+            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,
+                    "Problème de connexion avec l'API du LLM",
+                    "Problème de connexion avec l'API du LLM : " + e.getMessage());
+            facesContext.addMessage(null, message);
+            return null;
+        }
+        // Mise à jour de la conversation
         if (this.conversation.isEmpty()) {
-            // Ajouter le rôle système au début de la réponse
-            this.reponse += systemRole.toUpperCase(Locale.FRENCH) + "\n";
-            // Invalide le bouton pour changer le rôle système
+            this.reponse = systemRole.toUpperCase(Locale.FRENCH) + "\n" + this.reponse;
             this.systemRoleChangeable = false;
         }
-        this.reponse += question.toUpperCase(Locale.FRENCH) + "..";
-        // La conversation contient l'historique des questions-réponses depuis le début.
         afficherConversation();
         return null;
     }

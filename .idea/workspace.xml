@@ -9,15 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df0f0a1-3c79-4af7-8244-f66b5ca814ff" name="Changes" comment="Ajout des fichiers du tp0">
+    <list default="true" id="5df0f0a1-3c79-4af7-8244-f66b5ca814ff" name="Changes" comment="Ajout des proprietes dans Bb, avec getter et setter">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/exceptions/RequeteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/llm/JsonUtilPourGemini.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/llm/LlmClientPourGemini.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/jsf/Bb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/jsf/Bb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -172,7 +181,8 @@
       <workItem from="1733827593840" duration="683000" />
       <workItem from="1733828676428" duration="1975000" />
       <workItem from="1733835893708" duration="3650000" />
-      <workItem from="1733857141370" duration="323000" />
+      <workItem from="1733857141370" duration="4413000" />
+      <workItem from="1733902638911" duration="2444000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout des fichiers du tp0">
       <option name="closed" value="true" />
@@ -182,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733830608806</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ajout des proprietes dans Bb, avec getter et setter">
+      <option name="closed" value="true" />
+      <created>1733857782418</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733857782418</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +208,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajout des fichiers du tp0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout des fichiers du tp0" />
+    <MESSAGE value="Ajout des proprietes dans Bb, avec getter et setter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout des proprietes dans Bb, avec getter et setter" />
   </component>
 </project>
