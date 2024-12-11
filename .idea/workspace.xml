@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df0f0a1-3c79-4af7-8244-f66b5ca814ff" name="Changes" comment="Ajout des proprietes dans Bb, avec getter et setter">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/exceptions/RequeteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/llm/JsonUtilPourGemini.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/llm/LlmClientPourGemini.java" afterDir="false" />
+    <list default="true" id="5df0f0a1-3c79-4af7-8244-f66b5ca814ff" name="Changes" comment="Ajout de classes JsonUtil,LlmClient,RequeteException">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/jsf/Bb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ma/emsi/amine/tp1_api_direct/jsf/Bb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +178,7 @@
       <workItem from="1733828676428" duration="1975000" />
       <workItem from="1733835893708" duration="3650000" />
       <workItem from="1733857141370" duration="4413000" />
-      <workItem from="1733902638911" duration="2444000" />
+      <workItem from="1733902638911" duration="7429000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout des fichiers du tp0">
       <option name="closed" value="true" />
@@ -200,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733857782418</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ajout de classes JsonUtil,LlmClient,RequeteException">
+      <option name="closed" value="true" />
+      <created>1733907432847</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733907432847</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +213,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajout des fichiers du tp0" />
     <MESSAGE value="Ajout des proprietes dans Bb, avec getter et setter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout des proprietes dans Bb, avec getter et setter" />
+    <MESSAGE value="Ajout de classes JsonUtil,LlmClient,RequeteException" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de classes JsonUtil,LlmClient,RequeteException" />
   </component>
 </project>
