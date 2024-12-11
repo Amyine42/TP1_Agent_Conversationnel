@@ -17,6 +17,7 @@ import java.io.Serializable;
  * Par exemple, si l'instance qui l'utilise est de portée View, la conversation est
  * réunitialisée à chaque fois que l'utilisateur quitte la page en cours.
  */
+
 @Dependent
 public class LlmClientPourGemini implements Serializable {
     // Clé pour l'API du LLM
@@ -31,14 +32,14 @@ public class LlmClientPourGemini implements Serializable {
         this.key = System.getenv("GEMINI_API_KEY");
         // Client REST pour envoyer des requêtes vers les endpoints de l'API d'OpenAI
         this.clientRest = ClientBuilder.newClient();
-        String baseUrl = "https://api.gemini.com/v1/questions";
+        String baseUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=";
         // Endpoint REST pour envoyer la question à l'API.
-        this.target = clientRest.target(baseUrl);
+        this.target = this.clientRest.target(baseUrl+this.key);
     }
 
     /**
      * Envoie une requête à l'API de Gemini.
-     * @param requestEntity le corps de la requête (en JSON).
+     * @ param request Entity le corps de la requête (en JSON).
      * @return réponse REST de l'API (corps en JSON).
      */
     public Response envoyerRequete(Entity requestEntity) {

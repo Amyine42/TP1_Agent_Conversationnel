@@ -4,6 +4,8 @@ import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import jakarta.json.*;
 import jakarta.json.stream.JsonGenerator;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
@@ -22,7 +24,7 @@ import java.util.Map;
 @Dependent
 public class JsonUtilPourGemini implements Serializable {
 
-    private String systemRole; // = "helpful assistant";
+    private String systemRole= "helpful assistant";
     /**
      * Pour ajouter une nouvelle valeur à la fin du tableau JSON "messages" dans le document JSON de la requête.
      * Le "-" final indique que la valeur sera ajoutée à la fin du tableau.
@@ -44,6 +46,7 @@ public class JsonUtilPourGemini implements Serializable {
      */
     @Inject
     private LlmClientPourGemini geminiClient;
+
 
     /**
      * Envoi une requête à l'API de Gemini.

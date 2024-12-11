@@ -89,6 +89,9 @@ public class Bb implements Serializable {
     @Inject
     private FacesContext facesContext;
 
+    @Inject
+    private JsonUtilPourGemini jsonUtilPourGemini;
+
     /**
      * Obligatoire pour un bean CDI (classe gérée par CDI).
      */
@@ -154,8 +157,7 @@ public class Bb implements Serializable {
         }
         try {
             // Appel à JsonUtil pour traiter la question
-            JsonUtilPourGemini jsonUtil = new JsonUtilPourGemini();
-            LlmInteraction interaction = jsonUtil.envoyerRequete(question);
+            LlmInteraction interaction = jsonUtilPourGemini.envoyerRequete(question);
             this.reponse = interaction.reponseExtraite();
             this.texteRequeteJson = interaction.questionJson();
             this.texteReponseJson = interaction.reponseJson();
